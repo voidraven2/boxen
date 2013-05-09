@@ -71,6 +71,19 @@ node default {
   include ruby::1_9_2
   include ruby::1_9_3
   include ruby::2_0_0
+  
+
+  ########## CUSTOMIZATIONS
+  # redis
+  include redis
+  
+  #install postgres
+  include postgresql
+  postgresql::db {'testdb':}
+
+
+  #passenger + nginx
+
 
   # common, useful packages
   package {
